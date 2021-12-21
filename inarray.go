@@ -4,7 +4,7 @@ import (
 	"reflect"
 )
 
-func inArray(haystack interface{}, needle interface{}) bool {
+func InArray(haystack interface{}, needle interface{}) bool {
 	arr := reflect.ValueOf(haystack)
 
 	if arr.Kind() != reflect.Array {
