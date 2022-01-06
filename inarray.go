@@ -7,7 +7,7 @@ import (
 func InArray(haystack interface{}, needle interface{}) bool {
 	arr := reflect.ValueOf(haystack)
 
-	if arr.Kind() != reflect.Array {
+	if arr.Kind() != reflect.Array && arr.Kind() != reflect.Slice {
 		panic("Invalid data-type")
 	}
 

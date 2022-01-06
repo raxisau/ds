@@ -18,6 +18,17 @@ func TestInArray_FullTest(t *testing.T) {
 			t.Errorf("inArray(strArray,'Africa') = %v; want %v", valB2, false)
 		}
 	})
+	t.Run("Testing the inArray Function for a slice", func(t *testing.T) {
+		valB1 := InArray([]string{"India", "Canada", "Japan", "Germany", "Italy"}, "Canada")
+		if valB1 != true {
+			t.Errorf("inArray(strArray,'Canada') = %v; want %v", valB1, true)
+		}
+
+		valB2 := InArray([]string{"India", "Canada", "Japan", "Germany", "Italy"}, "Africa")
+		if valB2 != false {
+			t.Errorf("inArray(strArray,'Africa') = %v; want %v", valB2, false)
+		}
+	})
 	t.Run("Testing the inArray Function for int", func(t *testing.T) {
 		intArray := [7]int{8, 6, 7, 5, 3, 0, 9}
 
